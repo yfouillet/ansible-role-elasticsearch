@@ -1,0 +1,18 @@
+---
+## Select major version of elasticsearch package, with "7.x" format
+elasticsearch_version: '7.x'
+
+## For update elasticsearch, use "latest", for delete use "absent"
+elasticsearch_package_state: present
+
+## At least one of state and enabled are required, reloaded, restarted, started, stopped
+elasticsearch_service_enabled: true
+elasticsearch_service_state: started
+
+## Standard network configuration is "localhost",  "0.0.0.0" allow all network interfaces
+elasticsearch_http_port: 9200
+elasticsearch_network_host: "0.0.0.0"
+
+## Java memory configuration
+elasticsearch_java__ram_size_min: 1g
+elasticsearch_java_ram_size_max: 2g
