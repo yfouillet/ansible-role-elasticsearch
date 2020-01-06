@@ -1,0 +1,5 @@
+---
+- name: Restart service elasticsearch, if configuration change
+  service:
+    name: elasticsearch
+    state: restarted
